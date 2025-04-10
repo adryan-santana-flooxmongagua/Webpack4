@@ -1,8 +1,11 @@
-const webpakc = require('webpack')
+const modoDev = process.env.NODE_ENV !== 'production'
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
-    mode: 'development',
+    mode: modoDev ? 'development' : 'production',
     entry: './src/princ.js',
     output: {
         filename: 'princ.js',
@@ -12,8 +15,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.css'
         })
-    ]
-    ,
+    ],
+    optimization:{
+        minimizer:[
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true
+            }),
+            new OptimizeCSSAssetsPlugin({
+                
+            })
+        ]
+    },
     module: {
         rules: [
           {

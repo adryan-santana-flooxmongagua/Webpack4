@@ -1,8 +1,1 @@
-body {
-  background-color: red; }
-
-.button {
-  background-color: bgcolor-button;
-  color: cor-button;
-  font-size: 1.8rem; }
-
+body{background-color:red}.button{background-color:bgcolor-button;color:cor-button;font-size:1.8rem}
