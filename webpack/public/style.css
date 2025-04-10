@@ -1,3 +1,8 @@
-body{
-    background-color: rgb(255, 0, 0)
-}
+body {
+  background-color: red; }
+
+.button {
+  background-color: bgcolor-button;
+  color: cor-button;
+  font-size: 1.8rem; }
+

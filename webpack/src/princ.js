@@ -1,4 +1,4 @@
-import './assets/css/style.css'
+import './assets'
 require ('./modules/moduleA')
 //import Pessoa from "./people";
 
