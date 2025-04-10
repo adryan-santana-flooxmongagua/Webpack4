@@ -1,5 +1,5 @@
-const Pessoa = require('./people')
 
+require ('./modules/moduleA')
 //import Pessoa from "./people";
 
 const atendente = new Pessoa
