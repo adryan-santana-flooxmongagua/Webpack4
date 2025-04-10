@@ -23,7 +23,7 @@ module.exports = {
                 parallel: true
             }),
             new OptimizeCSSAssetsPlugin({
-                
+
             })
         ]
     },
@@ -36,9 +36,12 @@ module.exports = {
                // 'style-loader',
                  'css-loader',
                  'sass-loader',
-                ],
-          },
-          // outras regras...
+                ]
+          },{
+            test: /\.(png|svg|jpg|gif)$/,
+            use:['file-loader']
+          }
+          
         ],
       },
 }
